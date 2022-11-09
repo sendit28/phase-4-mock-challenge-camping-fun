@@ -5,18 +5,18 @@ import NewCamper from "./NewCamper";
 function Home() {
   const [campers, setCampers] = useState([]);
   const [activities, setActivities] = useState([]);
+  
+  // useEffect(() => {
+  //   fetch("/activities")
+  //     .then((r) => r.json())
+  //     .then(setActivities);
+  // }, []);
 
-  useEffect(() => {
-    fetch("/activities")
-      .then((r) => r.json())
-      .then(setActivities);
-  }, []);
-
-  useEffect(() => {
-    fetch("/campers")
-      .then((r) => r.json())
-      .then(setCampers);
-  }, []);
+  // useEffect(() => {
+  //   fetch("/campers")
+  //     .then((r) => r.json())
+  //     .then(setCampers);
+  // }, []);
 
   function handleAddCamper(newCamper) {
     setCampers((campers) => [...campers, newCamper]);
